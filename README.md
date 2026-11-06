@@ -4,13 +4,13 @@ Homebrew casks for apps by [t21 dev](https://t21.dev).
 
 ```bash
 brew install --cask t21dev/tap/turbo-reader
-brew install --cask t21dev/tap/porter
+brew install --cask t21dev/tap/porter-app
 ```
 
 | Cask | App | Macs |
 | --- | --- | --- |
 | `turbo-reader` | [Turbo Reader](https://turbo-reader.t21.dev), a fast, small RSS reader | Apple silicon and Intel |
-| `porter` | [Porter](https://porter.t21.dev), see which process holds a port and stop it | Apple silicon |
+| `porter-app` | [Porter](https://porter.t21.dev), see which process holds a port and stop it | Apple silicon |
 
 The apps are not notarised by Apple yet, so each cask clears the quarantine
 flag after install. Without that, macOS reports the app as damaged.
