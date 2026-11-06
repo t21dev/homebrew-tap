@@ -15,9 +15,11 @@ jobs:
   bump:
     runs-on: macos-latest
     steps:
-      - uses: Homebrew/actions/setup-homebrew@master
-      - uses: Homebrew/actions/bump-packages@master
+      - uses: Homebrew/actions/setup-homebrew@main
+      - uses: Homebrew/actions/bump-packages@main
         with:
-          # A fine-grained token with contents + pull requests write on this repo.
+          # A token with contents + pull requests write on this repo.
           token: ${{ secrets.HOMEBREW_BUMP_TOKEN }}
           casks: t21dev/tap/turbo-reader t21dev/tap/porter
+          # Our own tap: push the bump branch here instead of forking.
+          fork: false
