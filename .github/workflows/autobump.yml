@@ -1,0 +1,23 @@
+# Runs `brew livecheck` on the casks every few hours and opens a bump PR
+# (version + sha256) when a new GitHub release is out. Merge it, or turn on
+# auto-merge for PRs from this workflow.
+name: Bump casks
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 */6 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: macos-latest
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: Homebrew/actions/bump-packages@master
+        with:
+          # A fine-grained token with contents + pull requests write on this repo.
+          token: ${{ secrets.HOMEBREW_BUMP_TOKEN }}
+          casks: t21dev/tap/turbo-reader t21dev/tap/porter
