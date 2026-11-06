@@ -2,8 +2,7 @@ cask "porter" do
   version "0.7.0"
   sha256 "38ca03597c6b6c7f6c339d94d00275f2d3d1d9287bd98c2e70374aff94b70f9c"
 
-  url "https://github.com/t21dev/porter-app/releases/download/v#{version}/Porter_#{version}_aarch64.dmg",
-      verified: "github.com/t21dev/porter-app/"
+  url "https://github.com/t21dev/porter-app/releases/download/v#{version}/Porter_#{version}_aarch64.dmg"
   name "Porter"
   desc "Port monitor: see which process holds a port and stop it"
   homepage "https://porter.t21.dev/"

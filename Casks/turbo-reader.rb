@@ -5,8 +5,7 @@ cask "turbo-reader" do
   sha256 arm:   "b095e65b7785d98dc2e50e54a35fc2e242981c606d83618b86a88b7cb17cea10",
          intel: "40c63b5d34d3d33b6943e43447f80dd31839fc541cbafa4abbc4255927a5a7c2"
 
-  url "https://github.com/t21dev/turbo-reader/releases/download/v#{version}/Turbo.Reader_#{version}_#{arch}.dmg",
-      verified: "github.com/t21dev/turbo-reader/"
+  url "https://github.com/t21dev/turbo-reader/releases/download/v#{version}/Turbo.Reader_#{version}_#{arch}.dmg"
   name "Turbo Reader"
   desc "Fast, small RSS reader with a local agent server"
   homepage "https://turbo-reader.t21.dev/"
