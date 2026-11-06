@@ -16,17 +16,15 @@ cask "turbo-reader" do
   end
 
   auto_updates false
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Turbo Reader.app"
   # `turbo-reader --mcp` for Claude Code, Codex and other MCP clients.
   binary "#{appdir}/Turbo Reader.app/Contents/MacOS/turbo-reader"
 
   # The app is not notarised yet. Without this, macOS reports it as damaged.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Turbo Reader.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Turbo Reader.app"]
   end
 
   zap trash: [

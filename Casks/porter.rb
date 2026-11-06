@@ -15,15 +15,13 @@ cask "porter" do
   auto_updates false
   # Releases ship an Apple silicon build only. Add an `arch` block when an Intel dmg exists.
   depends_on arch: :arm64
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Porter.app"
 
   # The app is not notarised yet. Without this, macOS reports it as damaged.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Porter.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Porter.app"]
   end
 
   zap trash: [
