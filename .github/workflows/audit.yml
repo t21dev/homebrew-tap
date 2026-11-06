@@ -1,0 +1,24 @@
+# Checks every cask with Homebrew's own style and audit rules, and installs
+# it, on each push and pull request (including the autobump PRs).
+name: Audit casks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - name: Style
+        run: brew style --cask t21dev/tap/turbo-reader t21dev/tap/porter
+      - name: Audit
+        run: brew audit --cask --online --strict t21dev/tap/turbo-reader t21dev/tap/porter
+      - name: Install and uninstall
+        run: |
+          for c in turbo-reader porter; do
+            brew install --cask "t21dev/tap/$c"
+            brew uninstall --cask "t21dev/tap/$c"
+          done

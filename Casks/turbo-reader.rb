@@ -16,7 +16,7 @@ cask "turbo-reader" do
   end
 
   auto_updates false
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "Turbo Reader.app"
   # `turbo-reader --mcp` for Claude Code, Codex and other MCP clients.

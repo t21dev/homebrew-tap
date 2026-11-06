@@ -15,7 +15,7 @@ cask "porter" do
   auto_updates false
   # Releases ship an Apple silicon build only. Add an `arch` block when an Intel dmg exists.
   depends_on arch: :arm64
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "Porter.app"
 
