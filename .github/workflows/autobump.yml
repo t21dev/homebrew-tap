@@ -20,6 +20,6 @@ jobs:
         with:
           # A token with contents + pull requests write on this repo.
           token: ${{ secrets.HOMEBREW_BUMP_TOKEN }}
-          casks: t21dev/tap/turbo-reader t21dev/tap/porter-app
+          casks: t21dev/tap/turbo-reader t21dev/tap/porter-app t21dev/tap/kitab
           # Our own tap: push the bump branch here instead of forking.
           fork: false
