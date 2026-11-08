@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: Homebrew/actions/setup-homebrew@main
       - name: Style
-        run: brew style --cask t21dev/tap/turbo-reader t21dev/tap/porter-app
+        run: brew style --cask t21dev/tap/turbo-reader t21dev/tap/porter-app t21dev/tap/dev-cleaner
       - name: Audit
-        run: brew audit --cask --online --strict t21dev/tap/turbo-reader t21dev/tap/porter-app
+        run: brew audit --cask --online --strict t21dev/tap/turbo-reader t21dev/tap/porter-app t21dev/tap/dev-cleaner
       - name: Install and uninstall
         if: always()
         run: |
