@@ -1,9 +1,9 @@
 cask "kitab" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.3.2"
-  sha256 arm:   "80152c7d76235d6fd1e6a21d6a540ed7a8e63353917b39987bd1e2e3f6982fbd",
-         intel: "d27ce30ea45e921b1479bc7b302eedcf2ff9650786c3f942cc94ba946129846b"
+  version "0.3.3"
+  sha256 arm:   "c0fcf27ed90f8ac19cb37ee62fe8b1095ba1ba9bbd334f4534d6e31ce6b0cf1c",
+         intel: "f0c562fbd845b228acd2dc786041248808bc586083e97ccbf439512976b2ac61"
 
   url "https://github.com/t21dev/kitab/releases/download/v#{version}/Kitab_#{version}_#{arch}.dmg"
   name "Kitab Reader"
