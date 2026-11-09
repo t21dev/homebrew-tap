@@ -16,7 +16,7 @@ cask "kitab" do
   end
 
   auto_updates false
-  depends_on :macos
+  depends_on macos: ">= :monterey"
 
   app "Kitab.app"
   binary "#{appdir}/Kitab.app/Contents/MacOS/kitab"
