@@ -22,8 +22,8 @@ cask "kitab" do
   binary "#{appdir}/Kitab.app/Contents/MacOS/kitab"
 
   # The app is not notarised yet. Without this, macOS reports it as damaged.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/Kitab.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Kitab.app"]
   end
 
   zap trash: [

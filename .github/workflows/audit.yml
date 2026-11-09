@@ -13,13 +13,13 @@ jobs:
     steps:
       - uses: Homebrew/actions/setup-homebrew@main
       - name: Style
-        run: brew style --cask t21dev/tap/turbo-reader t21dev/tap/porter-app t21dev/tap/dev-cleaner
+        run: brew style --cask t21dev/tap/turbo-reader t21dev/tap/porter-app t21dev/tap/dev-cleaner t21dev/tap/kitab
       - name: Audit
-        run: brew audit --cask --online --strict t21dev/tap/turbo-reader t21dev/tap/porter-app t21dev/tap/dev-cleaner
+        run: brew audit --cask --online --strict t21dev/tap/turbo-reader t21dev/tap/porter-app t21dev/tap/dev-cleaner t21dev/tap/kitab
       - name: Install and uninstall
         if: always()
         run: |
-          for c in turbo-reader porter-app; do
+          for c in turbo-reader porter-app kitab; do
             brew install --cask "t21dev/tap/$c"
             brew uninstall --cask "t21dev/tap/$c"
           done
