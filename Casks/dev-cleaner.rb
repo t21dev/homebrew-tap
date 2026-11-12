@@ -1,9 +1,9 @@
 cask "dev-cleaner" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.6.0"
-  sha256 arm:   "516de0d757de86299db8fb4de7bcd1274155837756a51ba095e1a0c677ef0a52",
-         intel: "4b1c4ed73df30c044ed4ab44dd2646921c3cad9e80dcc3fd7fd4494c33850843"
+  version "0.7.0"
+  sha256 arm:   "2c2c1d8f0d4dbfd2f28c3d2120b972d0a577761c1b057059044e0c2c96a2892f",
+         intel: "cbda5c0b0ab1ccd184e3ceabd4ca2bdc21f1e92e369fcb68b0675ea05338e492"
 
   url "https://github.com/TriptoAfsin/dev-cleaner/releases/download/v#{version}/Dev.Cleaner_#{version}_#{arch}.dmg"
   name "Dev Cleaner"
