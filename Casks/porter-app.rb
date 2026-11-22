@@ -1,9 +1,9 @@
 cask "porter-app" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.8.0"
-  sha256 arm:   "1a89938ed6004434cd2f0506d7f178ff4e29c748738be5b001fa1ec9780f5d8b",
-         intel: "76b413538bad0fb841df25be0e4265368ad3d11377b2bc34f3d9b4d9a97ad84a"
+  version "0.8.1"
+  sha256 arm:   "9eada3adb903abd10c1fed0976220da9012959052620c2296c125c3d8627cc40",
+         intel: "09b855464d643da476f144f9750b366d0e505215d3b85fd48a9c7ecbe0a2c9ad"
 
   url "https://github.com/t21dev/porter-app/releases/download/v#{version}/Porter_#{version}_#{arch}.dmg"
   name "Porter"
@@ -19,6 +19,7 @@ cask "porter-app" do
   depends_on :macos
 
   app "Porter.app"
+  binary "#{appdir}/Porter.app/Contents/MacOS/porter"
 
   # The app is not notarised yet. Without this, macOS reports it as damaged.
   postflight_steps do
