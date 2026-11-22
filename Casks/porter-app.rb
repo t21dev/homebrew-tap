@@ -1,8 +1,11 @@
 cask "porter-app" do
-  version "0.7.1"
-  sha256 "056cfecfeba503e836480b13d064da939de11169e6ed52e7ec5d1d7934176ccb"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://github.com/t21dev/porter-app/releases/download/v#{version}/Porter_#{version}_aarch64.dmg"
+  version "0.8.0"
+  sha256 arm:   "1a89938ed6004434cd2f0506d7f178ff4e29c748738be5b001fa1ec9780f5d8b",
+         intel: "76b413538bad0fb841df25be0e4265368ad3d11377b2bc34f3d9b4d9a97ad84a"
+
+  url "https://github.com/t21dev/porter-app/releases/download/v#{version}/Porter_#{version}_#{arch}.dmg"
   name "Porter"
   desc "Port monitor: see which process holds a port and stop it"
   homepage "https://porter.t21.dev/"
@@ -13,8 +16,6 @@ cask "porter-app" do
   end
 
   auto_updates false
-  # Releases ship an Apple silicon build only. Add an `arch` block when an Intel dmg exists.
-  depends_on arch: :arm64
   depends_on :macos
 
   app "Porter.app"
