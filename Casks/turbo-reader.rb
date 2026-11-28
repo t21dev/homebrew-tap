@@ -1,9 +1,9 @@
 cask "turbo-reader" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.32.1"
-  sha256 arm:   "90c59ecae1fbd0de3f3fe95be31cab29d6cc10fcc37ce4453e186e768ac046b6",
-         intel: "287cbd9a758c9e17d0aadaf26d316d9284500dacfbb1fb7c4d135f8fed758684"
+  version "0.33.0"
+  sha256 arm:   "290851e2dab714dba8d2b93dcc1d80d1aaf657b36f3adba12866b82b69ee9470",
+         intel: "a669f0afd7263f991a1725380ce22e2022a24c10250dd7bcf9e9b5e6d0281e2d"
 
   url "https://github.com/t21dev/turbo-reader/releases/download/v#{version}/Turbo.Reader_#{version}_#{arch}.dmg"
   name "Turbo Reader"
