@@ -1,9 +1,9 @@
 cask "porter-app" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.8.3"
-  sha256 arm:   "fd5d1202a5636f1bf50e1e6e8cde5969107ad560ece520ab2e89526a5b233e58",
-         intel: "28c20de900a369581e81d52053f4fa9ebafa7f521b3e50c8daa0d81ae8fe1649"
+  version "0.8.4"
+  sha256 arm:   "9123eae9073169d5d4904a40634a6e045ee37040f9d2822d07503171841efbc0",
+         intel: "cba024f95b69db49e31aee7500347cbfd7f1e271993fb5a30dd686361e1a6fc6"
 
   url "https://github.com/t21dev/porter-app/releases/download/v#{version}/Porter_#{version}_#{arch}.dmg"
   name "Porter"
